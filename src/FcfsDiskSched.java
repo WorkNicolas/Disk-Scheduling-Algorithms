@@ -1,9 +1,14 @@
 public class FcfsDiskSched implements DiskSched {
+    private Model model;
+    public FcfsDiskSched (Model model) {
+        this.model = model;
+    }
     /**
-     * Logical block
+     * FCFS Disk Scheduling Algorithm
+     * Implemented from DiskSched interface
      *
-     * @param arr
-     * @param head
+     * @param arr request
+     * @param head HDD head representation
      */
     @Override
     public void diskSched(int arr[], int head) {
@@ -21,7 +26,20 @@ public class FcfsDiskSched implements DiskSched {
 
             // replace head with the currentTrack once used
             head = currentTrack;
+
+            // model setters
+            model.setSeekSequence(arr);
+            model.setSeekCounter(seekCounter);
         }
+    }
+    @Override
+    public String toString() {
+        return "Total Number of Seek Operations = " + model.getSeekCounter()
+                + "\nSeek Sequence: " + java.util.Arrays.toString(model.getSeekSequence());
+    }
+    @Override
+    public Model getModel() {
+        return model;
     }
 
 }

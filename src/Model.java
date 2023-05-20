@@ -2,6 +2,7 @@ public class Model {
     int[] arr;
     int head;
     int seekCounter;
+    int[] seekSequence;
 
     public int[] getArr() {
         return arr;
@@ -12,6 +13,9 @@ public class Model {
     public int getSeekCounter() {
         return seekCounter;
     }
+    public int[] getSeekSequence() {
+        return seekSequence;
+    }
     public void setArr(int[] arr) {
         this.arr = arr;
     }
@@ -20,5 +24,8 @@ public class Model {
     }
     public void setSeekCounter(int seekCounter) {
         this.seekCounter = seekCounter;
+    }
+    public void setSeekSequence(int[] seekSequence) {
+        this.seekSequence = seekSequence;
     }
 }
