@@ -1,3 +1,10 @@
+/**
+ * Model for Disk Scheduler
+ * Relevant getters and setters
+ *
+ * @author WorkNicolas
+ * @version 2023-05-20
+ */
 public class Model {
     int[] arr;
     int head;

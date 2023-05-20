@@ -1,3 +1,11 @@
+/**
+ * FCFS Disk Scheduling Algorithm
+ * Implemented with DiskSched interface
+ *
+ * @author 29AjayKumar
+ * @author WorkNicolas
+ * @version 2023-05-20
+ */
 public class FcfsDiskSched implements DiskSched {
     private Model model;
     public FcfsDiskSched (Model model) {
@@ -27,16 +35,33 @@ public class FcfsDiskSched implements DiskSched {
             // replace head with the currentTrack once used
             head = currentTrack;
 
-            // model setters
+            /**
+             * Model setters
+             *
+             * arr is used for seekSequence
+             * instead of seekSequence itself
+             *
+             */
             model.setSeekSequence(arr);
             model.setSeekCounter(seekCounter);
         }
     }
+    /**
+     * Use toString once diskSched method has been initialized
+     * Displays the seekSequence and the seekCounter
+     *
+     * @return String output for seekSequence and seekCounter
+     */
     @Override
     public String toString() {
         return "Total Number of Seek Operations = " + model.getSeekCounter()
                 + "\nSeek Sequence: " + java.util.Arrays.toString(model.getSeekSequence());
     }
+    /**
+     * Model getter
+     *
+     * @return Model for future use case
+     */
     @Override
     public Model getModel() {
         return model;
