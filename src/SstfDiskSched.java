@@ -11,6 +11,13 @@ public class SstfDiskSched implements DiskSched {
     public SstfDiskSched(Model model) {
         this.model = model;
     }
+
+    /**
+     * Nested class node for determining
+     * head distance from track and
+     * if track has been accessed
+     *
+     */
     class Node {
         // get distance from head pos minus track number
         int distance = 0;
