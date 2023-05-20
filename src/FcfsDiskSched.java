@@ -10,8 +10,8 @@ public class FcfsDiskSched implements DiskSched {
         int seekCounter = 0;
         int distance, currentTrack;
 
-        for (int i = 0; i < arr.length) {
-            currentTrack = arr[i];
+        for (int j : arr) {
+            currentTrack = j;
 
             // get distance from currentTrack minus head
             distance = Math.abs(currentTrack - head);
