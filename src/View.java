@@ -27,8 +27,28 @@ public class View {
     }
     private void initVal() {
         System.out.println("Initalizing Values...");
-        System.out.print("[IN IN IN ...] Request Array: ");
-        System.out.print("[IN] Head: ");
+        int[] arr;
+        while (true) {
+            System.out.print("[IN IN IN ...] Request Array: ");
+            try {
+                arr = inIntArray();
+                break;
+            } catch (NumberFormatException ex) {
+                System.out.println("Invalid Input: " + ex);
+            }
+        }
+        int head;
+        while (true) {
+            System.out.print("[IN] Head: ");
+            try {
+                head = inInt();
+                break;
+            } catch (NumberFormatException ex) {
+                System.out.println("Invalid Input: " + ex);
+            }
+        }
+        model.setArr(arr);
+        model.setHead(head);
     }
 
     /**
