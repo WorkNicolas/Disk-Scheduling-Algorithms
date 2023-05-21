@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b819fee-ee07-48e6-8c9d-364a589fb9e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CscanDiskSched.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ScanDiskSched.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DiskSched.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DiskSched.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FcfsDiskSched.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FcfsDiskSched.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SstfDiskSched.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SstfDiskSched.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CscanDiskSched.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CscanDiskSched.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

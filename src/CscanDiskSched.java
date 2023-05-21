@@ -55,6 +55,9 @@ public class CscanDiskSched implements DiskSched {
         boolean isRight = true;
         int run = 2;
         while (run-- > 0) {
+            if (!isRight) {
+                head = 0;
+            }
             for (int i = 0; i < (isRight ? right.size() : left.size()); i++) {
                 currentTrack = (isRight ? right.get(i) : left.get(i));
 
@@ -70,17 +73,26 @@ public class CscanDiskSched implements DiskSched {
                 // replace head with the currentTrack once used
                 head = currentTrack;
             }
+            isRight = false;
         }
 
 
         /**
          * Model setters
          *
-         * arr is used for seekSequence
-         * instead of seekSequence itself
+         * Convert Integer seekSequence to primitive int
          *
          */
-        model.setSeekSequence(arr);
+        model.setSeekSequence(java.util.Arrays.stream(
+                        seekSequence.toArray(
+                                new Integer[seekSequence.size()]
+                        )
+                ).mapToInt(
+                        Integer::intValue
+                ).toArray(
+
+                )
+        );
         model.setSeekCounter(seekCounter);
     }
     /**
