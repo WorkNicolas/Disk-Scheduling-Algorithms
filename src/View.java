@@ -10,9 +10,9 @@ public class View {
     }
     public View (Model model) {
         this.model = model;
-        menu(CurrentAlgo.NULL);
+        displayMenu(CurrentAlgo.NULL);
     }
-    private void menu(CurrentAlgo ca) {
+    public void displayMenu(CurrentAlgo ca) {
         System.out.println("Current Disk Scheduling Algorithm: " + ca);
         System.out.println("[1] FFCS");
         System.out.println("[2] SSTF");
@@ -24,5 +24,13 @@ public class View {
     private void initAlgo(CurrentAlgo ca) {
         System.out.println("Initializing Disk Scheduling Algorithm: " + ca);
 
+    }
+    // setters
+    public void setModel(Model model) {
+        this.model = model;
+    }
+    // getters
+    public Model getModel() {
+        return model;
     }
 }
