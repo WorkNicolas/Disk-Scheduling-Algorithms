@@ -46,13 +46,11 @@ public class SstfDiskSched implements DiskSched {
     }
 
     /**
-     * SSTF Disk Scheduling Algorithm
-     * Implemented from DiskSched interface
+     * SSTF Disk Scheduling Algorithm method
      *
      * @param arr request
      * @param head HDD head representation
      */
-    @Override
     public void diskSched(int[] arr, int head) {
         if (arr.length == 0) {
             return;
@@ -106,7 +104,6 @@ public class SstfDiskSched implements DiskSched {
      *
      * @return String output for seekSequence and seekCounter
      */
-    @Override
     public String toString() {
         return "Total Number of Seek Operations = " + model.getSeekCounter()
                 + "\nSeek Sequence: " + java.util.Arrays.toString(model.getSeekSequence());
@@ -117,7 +114,6 @@ public class SstfDiskSched implements DiskSched {
      *
      * @return Model for future use case
      */
-    @Override
     public Model getModel() {
         return model;
     }
