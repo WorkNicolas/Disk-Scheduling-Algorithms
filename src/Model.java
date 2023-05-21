@@ -10,7 +10,8 @@ public class Model {
     int head;
     int seekCounter;
     int[] seekSequence;
-
+    DiskSched ds;
+    // getters
     public int[] getArr() {
         return arr;
     }
@@ -23,6 +24,10 @@ public class Model {
     public int[] getSeekSequence() {
         return seekSequence;
     }
+    public DiskSched getDiskSched() {
+        return ds;
+    }
+    // setters
     public void setArr(int[] arr) {
         this.arr = arr;
     }
@@ -34,5 +39,8 @@ public class Model {
     }
     public void setSeekSequence(int[] seekSequence) {
         this.seekSequence = seekSequence;
+    }
+    public void setDiskSched(DiskSched ds) {
+        this.ds = ds;
     }
 }
