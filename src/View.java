@@ -19,6 +19,7 @@ public class View {
         System.out.println("[3] SCAN");
         System.out.println("[4] CSCAN");
         System.out.println("[5] LOOK");
+        System.out.println("[6] EXIT");
         System.out.print("User Input: ");
     }
     private void initAlgo(CurrentAlgo ca) {
