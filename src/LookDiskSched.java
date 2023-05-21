@@ -1,47 +1,27 @@
 import java.util.Collections;
 import java.util.Vector;
 
-public class CscanDiskSched implements DiskSched {
-    final int DISK_SIZE = 200;
+public class LookDiskSched implements DiskSched {
     private Model model;
-    public CscanDiskSched (Model model) {
+    public LookDiskSched (Model model) {
         this.model = model;
     }
+    public void diskSched(int[] arr, int head) {
+
+    }
     /**
-     * CScan Disk Scheduling Algorithm method
+     * Look Disk Scheduling Algorithm method
      *
      * @param arr request
      * @param head HDD head representation
      */
-    public void diskSched(int arr[], int head) {
+    public void diskSched(int arr[], int head, boolean isRight) {
         int seekCounter = 0;
         int distance, currentTrack;
 
         Vector<Integer> left = new Vector<>();
         Vector<Integer> right = new Vector<>();
         Vector<Integer> seekSequence = new Vector<>();
-
-        /**
-         * end values has to be visited
-         * before direction is reversed
-         *
-         */
-        left.add(0);
-        right.add(DISK_SIZE -1 );
-
-        /**
-         * left tracks will be serviced when
-         * the head comes back to the beginning
-         *
-         */
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < head) {
-                left.add(arr[i]);
-            }
-            if (arr[i] > head) {
-                right.add(arr[i]);
-            }
-        }
 
         // Sort left and right vectors
         Collections.sort(left);
@@ -52,7 +32,6 @@ public class CscanDiskSched implements DiskSched {
          * right side of the head first
          *
          */
-        boolean isRight = true;
         int run = 2;
         while (run-- > 0) {
             if (!isRight) {
@@ -73,9 +52,8 @@ public class CscanDiskSched implements DiskSched {
                 // replace head with the currentTrack once used
                 head = currentTrack;
             }
-            isRight = false;
+            isRight = !isRight;
         }
-
 
         /**
          * Model setters
