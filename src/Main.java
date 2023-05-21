@@ -46,16 +46,32 @@ public class Main {
             }
             switch (in) {
                 case 1:
+                    index = 1;
+                    ds = new FcfsDiskSched(model);
+                    model.setDiskSched(ds);
                     break;
                 case 2:
+                    index = 2;
+                    ds = new SstfDiskSched(model);
+                    model.setDiskSched(ds);
                     break;
                 case 3:
+                    index = 3;
+                    ds = new ScanDiskSched(model);
+                    model.setDiskSched(ds);
                     break;
                 case 4:
+                    ds = new CscanDiskSched(model);
+                    model.setDiskSched(ds);
+                    index = 4;
                     break;
                 case 5:
+                    ds = new LookDiskSched(model);
+                    model.setDiskSched(ds);
+                    index = 5;
                     break;
                 case 6:
+                    index = 6;
                     System.exit(0);
                     System.out.println("System.exit(Status: 0)");
                     break;

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class View {
     private Model model;
     enum CurrentAlgo {
@@ -19,8 +21,44 @@ public class View {
         System.out.println("[3] SCAN");
         System.out.println("[4] CSCAN");
         System.out.println("[5] LOOK");
-        System.out.println("[6] EXIT");
+        System.out.println("[6] Preset Values");
+        System.out.println("[7] Initialize Values");
         System.out.print("User Input: ");
+    }
+    private void initVal() {
+        System.out.println("Initalizing Values...");
+        System.out.print("[IN IN IN ...] Request Array: ");
+        System.out.print("[IN] Head: ");
+    }
+
+    /**
+     * User input for int value
+     *
+     * @return
+     */
+    private int inInt() {
+        Scanner sc = new Scanner(System.in);
+        int in = sc.nextInt();
+        return in;
+    }
+    /**
+     * Space-separated user input
+     * for int arrays
+     *
+     * @return
+     */
+    private int[] inIntArray() {
+        // space-separated user input
+        Scanner sc = new Scanner(System.in);
+        String in = sc.nextLine();
+        String[] e = in.split(" ");
+
+        // int conversion
+        int[] arr = new int[e.length];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.valueOf(e[i]);
+        }
+        return arr;
     }
     private void initAlgo(CurrentAlgo ca) {
         System.out.println("Initializing Disk Scheduling Algorithm: " + ca);
