@@ -18,7 +18,7 @@ Implements a circular scan of the disk scheduling algorithm.
 - Modifies the Scan Disk Scheduling Algorithm by dealing with its inefficiency
 - Services the requests uniformly
 
-## Look Disk SCheduling Algorithm 👀
+## Look Disk Scheduling Algorithm 👀
 The head starts from one head of the disk and moves on to towards the end. Moves from right to left.
 - Uses the same source code as Scan Disk Scheduling Algorithm
 - Implements ternary operators to minimize code redundancy, make code easily readable and to maximize efficiency
