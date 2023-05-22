@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b819fee-ee07-48e6-8c9d-364a589fb9e5" name="Changes" comment="" />
+    <list default="true" id="4b819fee-ee07-48e6-8c9d-364a589fb9e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/DiskScheduler/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DiskScheduler/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DiskScheduler/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

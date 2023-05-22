@@ -108,11 +108,19 @@ public class Main {
                     if (index != 0) {
                         ctrl.updateView(ctrl.getModel());
                         ctrl.getView().initAlgo(View.CurrentAlgo.valueOf(ca[index]));
-                        ctrl.getDiskSched().diskSched(ctrl.getModel().getArr(), ctrl.getModel().getHead());
+                        if (index == 3) {
+                            ctrl.getDiskSched().diskSched(ctrl.getModel().getArr(), ctrl.getModel().getHead(), false);
+                        } else if (index == 5) {
+                            ctrl.getDiskSched().diskSched(ctrl.getModel().getArr(), ctrl.getModel().getHead(), true);
+                        } else {
+                            ctrl.getDiskSched().diskSched(ctrl.getModel().getArr(), ctrl.getModel().getHead());
+                        }
+                        ctrl.setModel(ctrl.getDiskSched().getModel());
+                        System.out.println(ctrl.getDiskSched().toString());
                     } else {
                         System.out.println("Invalid Input: " + "NULL Index");
-                        continue;
                     }
+                    break;
                 case 10:
                     System.out.println("System.exit(Status: 0)");
                     System.exit(0);

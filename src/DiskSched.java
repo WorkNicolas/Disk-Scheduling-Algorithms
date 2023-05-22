@@ -8,7 +8,7 @@
  */
 public interface DiskSched {
     public void diskSched(int[] arr, int head);
-    public default void diskSched(int[] arr, int head, boolean direction) {
+    public default void diskSched(int[] arr, int head, boolean isRight) {
         
     }
     public String toString();
