@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DiskScheduler:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DiskScheduler_jar</output-path>
+    <root id="archive" name="DiskScheduler.jar">
+      <element id="module-output" name="DiskScheduler" />
+    </root>
+  </artifact>
+</component>

@@ -12,7 +12,7 @@ public class View {
     private Model model;
     enum CurrentAlgo {
         NULL,
-        FFCS,
+        FCFS,
         SSTF,
         SCAN,
         CSCAN,
@@ -24,7 +24,7 @@ public class View {
     }
     public void displayMenu(CurrentAlgo ca) {
         System.out.println("Current Disk Scheduling Algorithm: " + ca);
-        System.out.println("[1] FFCS");
+        System.out.println("[1] FCFS");
         System.out.println("[2] SSTF");
         System.out.println("[3] SCAN");
         System.out.println("[4] CSCAN");

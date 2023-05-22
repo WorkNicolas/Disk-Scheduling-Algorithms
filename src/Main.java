@@ -38,12 +38,10 @@ public class Main {
         boolean viewed = false;
         boolean initialized = false;
         byte index = 0;
-        String[] ca = {"NULL", "FFCS", "SSTF", "SCAN", "CSCAN", "LOOK"};
+        String[] ca = {"NULL", "FCFS", "SSTF", "SCAN", "CSCAN", "LOOK"};
 
         while (true) {
-            if (viewed) {
-                ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
-            }
+
             viewed = true;
             int in = 0;
             try {
@@ -91,12 +89,14 @@ public class Main {
                     ctrl.updateView(ctrl.getModel());
                     initialized = true;
                     view.displayContinue();
+                    ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     break;
                 case 7:
                     ctrl.updateView(ctrl.getModel());
                     ctrl.getView().initVal();
                     initialized = true;
                     view.displayContinue();
+                    ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     break;
                 case 8:
                     if (initialized) {
@@ -106,6 +106,7 @@ public class Main {
                         System.out.println("Invalid Input: Uninitialized Values");
                     }
                     view.displayContinue();
+                    ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     break;
                 case 9:
                     if (index != 0) {
@@ -124,6 +125,7 @@ public class Main {
                         System.out.println("Invalid Input: " + "NULL Index");
                     }
                     view.displayContinue();
+                    ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     break;
                 case 10:
                     System.out.println("System.exit(Status: 0)");
