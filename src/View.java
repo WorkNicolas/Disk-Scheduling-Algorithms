@@ -75,6 +75,7 @@ public class View {
     private int inInt() {
         Scanner sc = new Scanner(System.in);
         int in = sc.nextInt();
+        sc.close();
         return in;
     }
     /**
@@ -94,6 +95,7 @@ public class View {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = Integer.valueOf(e[i]);
         }
+        sc.close();
         return arr;
     }
     public void initAlgo(CurrentAlgo ca) {
