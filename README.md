@@ -30,9 +30,20 @@ Request: `[176, 79, 34, 60, 92, 11, 41, 114]`
 Head: `50`
 
 ## User-Input 👤
-To input requests, use space-separated input. Example: [IN IN IN ...] Input: 176 79 34 60 92 11 41 114
+To input requests, use space-separated input. 
+
+Example:
+```
+[IN IN IN ...] Request: 176 79 34 60 92 11 41 114
+```
 
 To input the head, simply write a number.
+
+Example:
+
+```
+[IN] Head: 50
+```
 
 ### Note 📝
 Due to byte data type, array size can only be 127. Thus, only input 127 numbers.
