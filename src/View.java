@@ -24,7 +24,13 @@ public class View {
         System.out.println("[6] Preset Values");
         System.out.println("[7] Initialize Values");
         System.out.print("User Input: ");
+        initVal();
     }
+
+    /**
+     * initalize int array and int head
+     *
+     */
     private void initVal() {
         System.out.println("Initalizing Values...");
         int[] arr;
@@ -82,7 +88,6 @@ public class View {
     }
     private void initAlgo(CurrentAlgo ca) {
         System.out.println("Initializing Disk Scheduling Algorithm: " + ca);
-
     }
     // setters
     public void setModel(Model model) {

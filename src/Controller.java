@@ -13,6 +13,16 @@ public class Controller {
     public void updateView(Model model) {
         view.setModel(model);
     }
+    // methods
+    public void presetValues() {
+        System.out.println("Initializing preset values...");
+        int arr[] = {176, 79, 34, 60, 92, 11, 41, 114};
+        int head = 50;
+        model.setArr(arr);
+        model.setHead(head);
+        System.out.println("Request: " + java.util.Arrays.toString(arr));
+        System.out.println("Head: " + head);
+    }
     // getters
     public Model getModel() {
         return model;
