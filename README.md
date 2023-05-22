@@ -23,3 +23,16 @@ The head starts from one head of the disk and moves on to towards the end. Moves
 - Uses the same source code as Scan Disk Scheduling Algorithm
 - Implements ternary operators to minimize code redundancy, make code easily readable and to maximize efficiency
 - Uses boolean instead of String to determine the direction to consume less memory.
+
+## Preset Values
+Request: `[176, 79, 34, 60, 92, 11, 41, 114]`
+
+Head: `50`
+
+## User-Input
+To input requests, use space-separated input. Example: [IN IN IN ...] Input: 176 79 34 60 92 11 41 114
+
+To input the head, simply write a number.
+
+### Note:
+Due to byte data type, array size can only be 127. Thus, only input 127 numbers.
