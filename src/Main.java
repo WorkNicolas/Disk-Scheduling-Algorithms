@@ -67,7 +67,7 @@ public class Main {
                     break;
                 case 3:
                     index = 3;
-                    ds = new ScanDiskSched(model);
+                    ds = new ScanLookDiskSched(model);
                     ctrl.setDiskSched(ds);
                     ctrl.updateView(ctrl.getModel());
                     ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
@@ -81,7 +81,7 @@ public class Main {
                     break;
                 case 5:
                     index = 5;
-                    ds = new LookDiskSched(model);
+                    ds = new ScanLookDiskSched(model);
                     ctrl.setDiskSched(ds);
                     ctrl.updateView(ctrl.getModel());
                     ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
@@ -90,11 +90,13 @@ public class Main {
                     ctrl.presetValues();
                     ctrl.updateView(ctrl.getModel());
                     initialized = true;
+                    view.displayContinue();
                     break;
                 case 7:
                     ctrl.updateView(ctrl.getModel());
                     ctrl.getView().initVal();
                     initialized = true;
+                    view.displayContinue();
                     break;
                 case 8:
                     if (initialized) {
@@ -103,6 +105,7 @@ public class Main {
                     } else {
                         System.out.println("Invalid Input: Uninitialized Values");
                     }
+                    view.displayContinue();
                     break;
                 case 9:
                     if (index != 0) {
@@ -120,6 +123,7 @@ public class Main {
                     } else {
                         System.out.println("Invalid Input: " + "NULL Index");
                     }
+                    view.displayContinue();
                     break;
                 case 10:
                     System.out.println("System.exit(Status: 0)");
@@ -127,6 +131,7 @@ public class Main {
                     break;
                 default:
                     System.out.println("Invalid Input: Option " + in + " does not exist");
+                    view.displayContinue();
                     break;
             }
         }

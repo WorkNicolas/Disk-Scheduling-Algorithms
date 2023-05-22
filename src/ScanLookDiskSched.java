@@ -1,6 +1,18 @@
 /**
- * Look Disk Scheduling Algorithm
+ * Scan/Look Disk Scheduling Algorithm
  * Implemented with DiskSched interface
+ *
+ * The Look Disk Scheduling Algorithm is
+ * similar to how Scan Disk Scheduling
+ * Algorithm works
+ *
+ * The difference is simply determined by
+ * the direction of the head
+ *
+ * I was able to minimize code redundancy
+ * by using ternary operators and through
+ * the use of boolean variables, I was able
+ * to determine the direction of the head
  *
  * @author 29AjayKumar
  * @author WorkNicolas
@@ -10,43 +22,66 @@
 import java.util.Collections;
 import java.util.Vector;
 
-public class LookDiskSched implements DiskSched {
+public class ScanLookDiskSched implements DiskSched {
     private Model model;
-    public LookDiskSched (Model model) {
+    private final int DISK_SIZE = 200;
+    public ScanLookDiskSched (Model model) {
         this.model = model;
     }
     public void diskSched(int[] arr, int head) {
 
     }
-    /**
-     * Look Disk Scheduling Algorithm method
-     *
-     * @param arr request
-     * @param head HDD head representation
-     */
-    public void diskSched(int arr[], int head, boolean isRight) {
-        int seekCounter = 0;
-        int distance, currentTrack;
 
+    /**
+     * Scan Disk Scheduling Algorithm method
+     *
+     * @param arr
+     * @param head
+     * @param isRight [direction ? right : left]
+     */
+    public void diskSched(int[] arr, int head, boolean isRight) {
+        int seekCounter = 0;
+        int distance;
+        int currentTrack;
         Vector<Integer> left = new Vector<>();
         Vector<Integer> right = new Vector<>();
-        Vector<Integer> seekSequence = new Vector<>();
+        Vector<Integer> seekSequence = new Vector<Integer>();
 
-        // Sort left and right vectors
+        /**
+         * end values has to be visited
+         * before direction is reversed
+         *
+         */
+        if (isRight == false) {
+            left.add(0);
+        } else if (isRight == true) {
+            right.add(DISK_SIZE - 1);
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < head) {
+                left.add(arr[i]);
+            }
+            if (arr[i] > head) {
+                right.add(arr[i]);
+            }
+        }
+
+        // sort left and right vectors
         Collections.sort(left);
         Collections.sort(right);
 
         /**
-         * Service the requests on the
-         * right side of the head first
+         * scan loop twice from left and right
+         * of the head
          *
+         * modifed the original author's work
+         * to use ternary operator for salient
+         * code
          */
         int run = 2;
         while (run-- > 0) {
-            if (!isRight) {
-                head = 0;
-            }
-            for (int i = 0; i < (isRight ? right.size() : left.size()); i++) {
+            for (int i = (isRight ? right.size() : left.size()) - 1; i >= 0; i--) {
                 currentTrack = (isRight ? right.get(i) : left.get(i));
 
                 // append currentTrack to seekSequence
@@ -71,31 +106,26 @@ public class LookDiskSched implements DiskSched {
          *
          */
         model.setSeekSequence(java.util.Arrays.stream(
-                        seekSequence.toArray(
-                                new Integer[seekSequence.size()]
-                        )
-                ).mapToInt(
-                        Integer::intValue
-                ).toArray(
-
+                seekSequence.toArray(
+                        new Integer[seekSequence.size()]
                 )
+            ).mapToInt(
+                Integer::intValue
+            ).toArray(
+
+            )
         );
         model.setSeekCounter(seekCounter);
     }
-    /**
-     * Use toString once diskSched method has been initialized
-     * Displays the seekSequence and the seekCounter
-     *
-     * @return String output for seekSequence and seekCounter
-     */
     public String toString() {
         return "Total Number of Seek Operations = " + model.getSeekCounter()
                 + "\nSeek Sequence: " + java.util.Arrays.toString(model.getSeekSequence());
     }
+
     /**
      * Model getter
      *
-     * @return Model for future use case
+     * @return
      */
     public Model getModel() {
         return model;
@@ -108,5 +138,4 @@ public class LookDiskSched implements DiskSched {
     public void setModel(Model model) {
         this.model = model;
     }
-
 }
