@@ -96,7 +96,7 @@ public class View {
         }
         return arr;
     }
-    private void initAlgo(CurrentAlgo ca) {
+    public void initAlgo(CurrentAlgo ca) {
         System.out.println("Initializing Disk Scheduling Algorithm: " + ca);
     }
     public void displayValues() {

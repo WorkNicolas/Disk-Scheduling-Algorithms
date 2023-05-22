@@ -107,6 +107,7 @@ public class Main {
                 case 9:
                     if (index != 0) {
                         ctrl.updateView(ctrl.getModel());
+                        ctrl.getView().initAlgo(View.CurrentAlgo.valueOf(ca[index]));
                         ctrl.getDiskSched().diskSched(ctrl.getModel().getArr(), ctrl.getModel().getHead());
                     } else {
                         System.out.println("Invalid Input: " + "NULL Index");
