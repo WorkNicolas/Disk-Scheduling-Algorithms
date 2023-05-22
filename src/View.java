@@ -35,7 +35,6 @@ public class View {
         System.out.println("[9] Run Disk Scheduler");
         System.out.println("[10] System Exit");
         System.out.print("User Input: ");
-        initVal();
     }
 
     /**

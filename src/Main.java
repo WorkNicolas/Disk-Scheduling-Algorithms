@@ -1,3 +1,10 @@
+/**
+ * Main Runner Class
+ *
+ * @author WorkNicolas
+ * @version 2023-05-22
+ */
+
 import java.util.Scanner;
 
 public class Main {
