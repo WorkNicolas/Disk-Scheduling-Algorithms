@@ -30,14 +30,14 @@ Request: `[176, 79, 34, 60, 92, 11, 41, 114]`
 Head: `50`
 
 ## User-Input 👤
-To input requests, use space-separated input. 
+**To input requests, use space-separated input. **
 
 Example:
 ```
 [IN IN IN ...] Request: 176 79 34 60 92 11 41 114
 ```
 
-To input the head, simply write a number.
+**To input the head, simply write a number.**
 
 Example:
 
