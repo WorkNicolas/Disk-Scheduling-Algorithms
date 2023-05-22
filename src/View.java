@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class View {
@@ -23,8 +24,9 @@ public class View {
         System.out.println("[5] LOOK");
         System.out.println("[6] Preset Values");
         System.out.println("[7] Initialize Values");
-        System.out.println("[8] Run Disk Scheduler");
-        System.out.println("[9] System Exit");
+        System.out.println("[8] Check Values");
+        System.out.println("[9] Run Disk Scheduler");
+        System.out.println("[10] System Exit");
         System.out.print("User Input: ");
         initVal();
     }
@@ -90,6 +92,10 @@ public class View {
     }
     private void initAlgo(CurrentAlgo ca) {
         System.out.println("Initializing Disk Scheduling Algorithm: " + ca);
+    }
+    public void displayValues() {
+        System.out.println("Request: " + Arrays.toString(model.getArr()));
+        System.out.println("Head: " + model.getHead());
     }
     // setters
     public void setModel(Model model) {

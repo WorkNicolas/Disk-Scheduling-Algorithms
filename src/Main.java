@@ -87,8 +87,17 @@ public class Main {
                     ctrl.getView().initVal();
                     break;
                 case 8:
-                    ctrl.getDiskSched().diskSched(ctrl.getModel().getArr(), ctrl.getModel().getHead());
+                    ctrl.getView().displayValues();
+                    break;
                 case 9:
+                    if (index != 0) {
+                        ctrl.updateView(ctrl.getModel());
+                        ctrl.getDiskSched().diskSched(ctrl.getModel().getArr(), ctrl.getModel().getHead());
+                    } else {
+                        System.out.println("Invalid Input: " + "NULL Index");
+                        continue;
+                    }
+                case 10:
                     System.out.println("System.exit(Status: 0)");
                     System.exit(0);
                     break;
