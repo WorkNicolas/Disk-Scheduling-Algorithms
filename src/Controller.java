@@ -30,11 +30,17 @@ public class Controller {
     public View getView() {
         return view;
     }
+    public DiskSched getDiskSched() {
+        return model.getDiskSched();
+    }
     // setters
     public void setModel(Model model) {
         this.model = model;
     }
     public void setView(View view) {
         this.view = view;
+    }
+    public void setDiskSched(DiskSched ds) {
+        model.setDiskSched(ds);
     }
 }

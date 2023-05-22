@@ -23,6 +23,8 @@ public class View {
         System.out.println("[5] LOOK");
         System.out.println("[6] Preset Values");
         System.out.println("[7] Initialize Values");
+        System.out.println("[8] Run Disk Scheduler");
+        System.out.println("[9] System Exit");
         System.out.print("User Input: ");
         initVal();
     }
@@ -31,7 +33,7 @@ public class View {
      * initalize int array and int head
      *
      */
-    private void initVal() {
+    public void initVal() {
         System.out.println("Initalizing Values...");
         int[] arr;
         while (true) {

@@ -48,32 +48,49 @@ public class Main {
                 case 1:
                     index = 1;
                     ds = new FcfsDiskSched(model);
-                    model.setDiskSched(ds);
+                    ctrl.setDiskSched(ds);
+                    ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     break;
                 case 2:
                     index = 2;
                     ds = new SstfDiskSched(model);
-                    model.setDiskSched(ds);
+                    ctrl.setDiskSched(ds);
+                    ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     break;
                 case 3:
                     index = 3;
                     ds = new ScanDiskSched(model);
-                    model.setDiskSched(ds);
+                    ctrl.setDiskSched(ds);
+                    ctrl.updateView(ctrl.getModel());
+                    ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     break;
                 case 4:
-                    ds = new CscanDiskSched(model);
-                    model.setDiskSched(ds);
                     index = 4;
+                    ds = new CscanDiskSched(model);
+                    ctrl.setDiskSched(ds);
+                    ctrl.updateView(ctrl.getModel());
+                    ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     break;
                 case 5:
                     ds = new LookDiskSched(model);
-                    model.setDiskSched(ds);
+                    ctrl.setDiskSched(ds);
+                    ctrl.updateView(ctrl.getModel());
+                    ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     index = 5;
                     break;
                 case 6:
-                    index = 6;
-                    System.exit(0);
+                    ctrl.presetValues();
+                    ctrl.updateView(ctrl.getModel());
+                    break;
+                case 7:
+                    ctrl.updateView(ctrl.getModel());
+                    ctrl.getView().initVal();
+                    break;
+                case 8:
+                    ctrl.getDiskSched().diskSched(ctrl.getModel().getArr(), ctrl.getModel().getHead());
+                case 9:
                     System.out.println("System.exit(Status: 0)");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Invalid Input: Option " + in + " does not exist");
