@@ -3,7 +3,7 @@
  * Relevant getters and setters
  *
  * @author WorkNicolas
- * @version 2023-05-20
+ * @version 2023-05-22
  */
 public class Model {
     int[] arr;

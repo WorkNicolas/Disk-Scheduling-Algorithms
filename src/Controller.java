@@ -1,3 +1,10 @@
+/**
+ * Controller Architecture
+ *
+ * @author WorkNicolas
+ * @version 2023-05-22
+ */
+
 public class Controller {
     private Model model;
     private View view;

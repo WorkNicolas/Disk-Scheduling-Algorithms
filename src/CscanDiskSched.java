@@ -1,3 +1,12 @@
+/**
+ * CScan Disk Scheduling Algorithm
+ * Implemented with DiskSched interface
+ *
+ * @author 29AjayKumar
+ * @author WorkNicolas
+ * @version 2023-05-22
+ */
+
 import java.util.Collections;
 import java.util.Vector;
 
@@ -112,6 +121,14 @@ public class CscanDiskSched implements DiskSched {
      */
     public Model getModel() {
         return model;
+    }
+    /**
+     * Model setter
+     *
+     * @param model
+     */
+    public void setModel(Model model) {
+        this.model = model;
     }
 
 }

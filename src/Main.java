@@ -72,11 +72,11 @@ public class Main {
                     ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
                     break;
                 case 5:
+                    index = 5;
                     ds = new LookDiskSched(model);
                     ctrl.setDiskSched(ds);
                     ctrl.updateView(ctrl.getModel());
                     ctrl.getView().displayMenu(View.CurrentAlgo.valueOf(ca[index]));
-                    index = 5;
                     break;
                 case 6:
                     ctrl.presetValues();

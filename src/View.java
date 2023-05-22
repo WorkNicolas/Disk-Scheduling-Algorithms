@@ -1,3 +1,10 @@
+/**
+ * View Architecture
+ *
+ * @author WorkNicolas
+ * @version 2023-05-22
+ */
+
 import java.util.Arrays;
 import java.util.Scanner;
 

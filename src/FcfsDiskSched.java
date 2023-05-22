@@ -4,7 +4,7 @@
  *
  * @author 29AjayKumar
  * @author WorkNicolas
- * @version 2023-05-20
+ * @version 2023-05-22
  */
 public class FcfsDiskSched implements DiskSched {
     private Model model;
@@ -61,5 +61,12 @@ public class FcfsDiskSched implements DiskSched {
     public Model getModel() {
         return model;
     }
-
+    /**
+     * Model setter
+     *
+     * @param model
+     */
+    public void setModel(Model model) {
+        this.model = model;
+    }
 }

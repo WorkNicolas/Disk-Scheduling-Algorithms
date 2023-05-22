@@ -3,7 +3,7 @@
  * Created for code uniformity
  *
  * @author WorkNicolas
- * @version 2023-05-20
+ * @version 2023-05-22
  *
  */
 public interface DiskSched {
@@ -13,4 +13,5 @@ public interface DiskSched {
     }
     public String toString();
     public Model getModel();
+    public void setModel(Model model);
 }
