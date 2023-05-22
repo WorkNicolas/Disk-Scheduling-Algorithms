@@ -36,6 +36,7 @@ public class Main {
          *
          */
         boolean viewed = false;
+        boolean initialized = false;
         byte index = 0;
         String[] ca = {"NULL", "FFCS", "SSTF", "SCAN", "CSCAN", "LOOK"};
 
@@ -88,13 +89,20 @@ public class Main {
                 case 6:
                     ctrl.presetValues();
                     ctrl.updateView(ctrl.getModel());
+                    initialized = true;
                     break;
                 case 7:
                     ctrl.updateView(ctrl.getModel());
                     ctrl.getView().initVal();
+                    initialized = true;
                     break;
                 case 8:
-                    ctrl.getView().displayValues();
+                    if (initialized) {
+                        ctrl.updateView(ctrl.getModel());
+                        ctrl.getView().displayValues();
+                    } else {
+                        System.out.println("Invalid Input: Uninitialized Values");
+                    }
                     break;
                 case 9:
                     if (index != 0) {
