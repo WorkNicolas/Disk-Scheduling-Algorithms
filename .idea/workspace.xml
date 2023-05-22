@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b819fee-ee07-48e6-8c9d-364a589fb9e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DiskScheduler/DiskSched.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DiskScheduler/DiskSched.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DiskScheduler/LookDiskSched.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DiskScheduler/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DiskScheduler/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DiskScheduler/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DiskScheduler/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LookDiskSched.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LookDiskSched.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ScanLookDiskSched.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ScanLookDiskSched.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

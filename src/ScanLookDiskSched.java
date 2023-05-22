@@ -46,7 +46,10 @@ public class ScanLookDiskSched implements DiskSched {
         Vector<Integer> left = new Vector<>();
         Vector<Integer> right = new Vector<>();
         Vector<Integer> seekSequence = new Vector<Integer>();
-
+        boolean look = false;
+        if (isRight) {
+            look = true;
+        }
         /**
          * end values has to be visited
          * before direction is reversed
@@ -72,8 +75,10 @@ public class ScanLookDiskSched implements DiskSched {
         Collections.sort(right);
 
         /**
-         * scan loop twice from left and right
-         * of the head
+         * scan loop twice from initial
+         * direction of the head then to
+         * the opposite direction of the
+         * head
          *
          * modifed the original author's work
          * to use ternary operator for salient
